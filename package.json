@@ -1,0 +1,16 @@
+{
+  "name": "mrv-codehub",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev:client": "npm run dev --prefix client",
+    "dev:server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build --prefix client",
+    "start": "npm run start --prefix server",
+    "deploy": "npm run build && npm run start"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
